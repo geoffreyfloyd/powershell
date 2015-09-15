@@ -38,7 +38,7 @@ if ($env:github_shell -eq $null) {
   $appPath = Resolve-Path "$env:LocalAppData\Apps\2.0\7NWMARN5.KXM\5HN4TD1J.049\gith..tion_317444273a93ac29_0003.0000_4d58bde1c4cef1d4"
   $msBuildPath = "$env:SystemRoot\Microsoft.NET\Framework\v4.0.30319"
 
-  $env:Path = "$env:Path;$pGitPath\cmd;$pGitPath\bin;$pGitPath\mingw\bin;$appPath;$msbuildPath";
+  $env:Path = "$env:Path;$env:PSModulePath;C:\ProgramData\chocolatey\bin;$pGitPath\cmd;$pGitPath\bin;$pGitPath\mingw\bin;$appPath;$msbuildPath";
 
   if (!$SkipSSHSetup) {
     & (Join-Path $appPath GitHub.exe) --set-up-ssh
