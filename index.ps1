@@ -33,3 +33,4 @@ Set-Alias env-n (Resolve-Path "$env:powershell\NodeEnvironment.ps1")
 cd c:\prj\
 
 . (Resolve-Path "$env:powershell\GitEnvironment.ps1")
+. (Resolve-Path "$env:powershell\ColorOutput.ps1")

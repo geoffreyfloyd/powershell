@@ -46,4 +46,6 @@ if ($env:github_shell -eq $null) {
 
   Pop-Location
 
+  Import-Module posh-git
+
 } else { Write-Verbose "GitHub shell environment already setup" }
