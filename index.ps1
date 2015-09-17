@@ -32,5 +32,24 @@ Set-Alias env-n (Resolve-Path "$env:powershell\NodeEnvironment.ps1")
 # SET CWD
 cd c:\prj\
 
+# LOCAL VARIABLES
+$msBuildPath = "$env:SystemRoot\Microsoft.NET\Framework\v4.0.30319"
+$basePath = "$env:SystemRoot\System32;C:\ProgramData\chocolatey\bin;$msbuildPath;"
+
+# ENVIRONMENT VARIABLES
+$env:ANDROID_HOME = "$env:LocalAppData\Android\sdk"
+$env:ANDROID_TOOLS = "$env:LocalAppData\Android\sdk\tools"
+$env:ANDROID_PFTOOLS = "$env:LocalAppData\Android\sdk\platform-tools"
+$env:HOME = $HOME
+$env:JAVA_HOME = "C:\Program Files\Java\jdk1.8.0_60"
+$env:TMP = $env:TEMP = [system.io.path]::gettemppath()
+
+# SET PATH
+$env:PATH = "$basePath;$env:PSModulePath;"
+
 . (Resolve-Path "$env:powershell\GitEnvironment.ps1")
+. (Resolve-Path "$env:powershell\NodeEnvironment.ps1")
+. (Resolve-Path "$env:powershell\AndroidEnvironment.ps1")
+
+# COLORIZE OUTPUT
 . (Resolve-Path "$env:powershell\ColorOutput.ps1")

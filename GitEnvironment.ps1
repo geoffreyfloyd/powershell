@@ -27,8 +27,7 @@ if ($env:github_shell -eq $null) {
   $env:github_git = Resolve-Path "$env:LocalAppData\GitHub\PortableGit_c2ba306e536fdf878271f7fe636a147ff37326ad"
   $env:PLINK_PROTOCOL = "ssh"
   $env:TERM = "msys"
-  $env:HOME = $HOME
-  $env:TMP = $env:TEMP = [system.io.path]::gettemppath()
+
   if ($env:EDITOR -eq $null) {
     $env:EDITOR = "GitPad"
   }
@@ -36,9 +35,8 @@ if ($env:github_shell -eq $null) {
   # Setup PATH
   $pGitPath = $env:github_git
   $appPath = Resolve-Path "$env:LocalAppData\Apps\2.0\7NWMARN5.KXM\5HN4TD1J.049\gith..tion_317444273a93ac29_0003.0000_4d58bde1c4cef1d4"
-  $msBuildPath = "$env:SystemRoot\Microsoft.NET\Framework\v4.0.30319"
 
-  $env:Path = "$env:Path;$env:PSModulePath;C:\ProgramData\chocolatey\bin;$pGitPath\cmd;$pGitPath\bin;$pGitPath\mingw\bin;$appPath;$msbuildPath";
+  $env:PATH = "$env:PATH;$pGitPath\cmd;$pGitPath\bin;$pGitPath\mingw\bin;$appPath;";
 
   if (!$SkipSSHSetup) {
     & (Join-Path $appPath GitHub.exe) --set-up-ssh
