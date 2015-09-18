@@ -40,12 +40,15 @@ $basePath = "$env:SystemRoot\System32;C:\ProgramData\chocolatey\bin;$msbuildPath
 $env:ANDROID_HOME = "$env:LocalAppData\Android\sdk"
 $env:ANDROID_TOOLS = "$env:LocalAppData\Android\sdk\tools"
 $env:ANDROID_PFTOOLS = "$env:LocalAppData\Android\sdk\platform-tools"
+$env:ANDROID_BLDTOOLS = "$env:LocalAppData\\Android\sdk\build-tools\22.0.1"
+$env:ANDROID_NDK = "$env:LocalAppData\\Android\ndk"
 $env:HOME = $HOME
 $env:JAVA_HOME = "C:\Program Files\Java\jdk1.8.0_60"
 $env:TMP = $env:TEMP = [system.io.path]::gettemppath()
+$env:PYTHON = "C:\Python27"
 
 # SET PATH
-$env:PATH = "$basePath;$env:PSModulePath;"
+$env:PATH = "$basePath;$env:PSModulePath;$env:PYTHON;"
 
 . (Resolve-Path "$env:powershell\GitEnvironment.ps1")
 . (Resolve-Path "$env:powershell\NodeEnvironment.ps1")
