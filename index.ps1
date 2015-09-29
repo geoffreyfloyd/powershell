@@ -1,4 +1,3 @@
-
 # SHOW
 Set-Alias show Get-ChildItem
 
@@ -33,8 +32,9 @@ Set-Alias env-n (Resolve-Path "$env:powershell\NodeEnvironment.ps1")
 cd c:\prj\
 
 # LOCAL VARIABLES
-$msBuildPath = "$env:SystemRoot\Microsoft.NET\Framework\v4.0.30319"
-$basePath = "$env:SystemRoot\System32;C:\ProgramData\chocolatey\bin;$msbuildPath;"
+# $msBuildPath = "$env:SystemRoot\Microsoft.NET\Framework\v4.0.30319"
+$msBuildPath = "C:\Program Files (x86)\MSBuild\12.0\bin"
+$basePath = "C:\bin;$env:SystemRoot\System32;$env:SystemRoot\system32\WindowsPowerShell\v1.0;C:\ProgramData\chocolatey\bin;$msbuildPath;"
 
 # ENVIRONMENT VARIABLES
 $env:ANDROID_HOME = "$env:LocalAppData\Android\sdk"
@@ -56,3 +56,6 @@ $env:PATH = "$basePath;$env:PSModulePath;$env:PYTHON;"
 
 # COLORIZE OUTPUT
 . (Resolve-Path "$env:powershell\ColorOutput.ps1")
+
+Import-Module Tools -DisableNameChecking
+Write-Output "Welcome!"
