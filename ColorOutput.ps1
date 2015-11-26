@@ -10,7 +10,7 @@ function Write-Color-LS
     Write-host ("{0,-7} {1,25} {2,10} {3}" -f $file.mode, ([String]::Format("{0,10}  {1,8}", $file.LastWriteTime.ToString("d"), $file.LastWriteTime.ToString("t"))), $fileLen, $file.name) -foregroundcolor $color 
 }
 
-$notfirst = false
+$notfirst = "False"
 . (Resolve-Path "$env:powershell\New-CommandWrapper.ps1") Out-Default -Process {
     $regex_opts = ([System.Text.RegularExpressions.RegexOptions]::IgnoreCase)
 

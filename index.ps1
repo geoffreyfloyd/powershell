@@ -30,7 +30,7 @@ Set-Alias env-n (Resolve-Path "$env:powershell\NodeEnvironment.ps1")
 # C:\Program Files\Microsoft SQL Server\120\Tools\Binn\;
 
 # SET CWD
-cd c:\prj\
+cd d:\prj\
 
 # LOCAL VARIABLES
 $msBuildPath = "$env:SystemRoot\Microsoft.NET\Framework\v4.0.30319"
