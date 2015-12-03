@@ -33,6 +33,7 @@ if ($env:github_shell -eq $null) {
   }
 
   # Setup PATH
+  $env:local_git = Resolve-Path "$env:LocalAppData\Programs\Git"
   $pGitPath = $env:github_git
   $appPath = Resolve-Path "$env:LocalAppData\Apps\2.0\TL3EEK0H.QJG\46AGT1PE.XTM\gith..tion_317444273a93ac29_0003.0000_f3a9f44c4e4f6514"
 
