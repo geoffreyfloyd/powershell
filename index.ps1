@@ -29,7 +29,7 @@ Set-Alias env-n (Resolve-Path "$env:powershell\NodeEnvironment.ps1")
 # C:\Program Files\Microsoft SQL Server\120\Tools\Binn\;
 
 # SET CWD
-cd d:\prj\
+cd c:\aedev\web\reactappportal
 
 # LOCAL VARIABLES
 # $msBuildPath = "$env:SystemRoot\Microsoft.NET\Framework\v4.0.30319"
