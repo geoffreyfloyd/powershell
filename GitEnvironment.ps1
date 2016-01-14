@@ -24,7 +24,7 @@ if ($env:github_shell -eq $null) {
   Push-Location (Split-Path -Path $MyInvocation.MyCommand.Definition -Parent)
 
   $env:github_posh_git = Resolve-Path "$env:LocalAppData\GitHub\PoshGit_869d4c5159797755bc04749db47b166136e59132"
-  $env:github_git = Resolve-Path "$env:LocalAppData\GitHub\PortableGit_c2ba306e536fdf878271f7fe636a147ff37326ad"
+  $env:github_git = Resolve-Path "$env:LocalAppData\GitHub\PortableGit_c7e0cbde92ba565cb218a521411d0e854079a28c"
   $env:PLINK_PROTOCOL = "ssh"
   $env:TERM = "msys"
 
@@ -33,8 +33,9 @@ if ($env:github_shell -eq $null) {
   }
 
   # Setup PATH
+  $env:local_git = Resolve-Path "$env:LocalAppData\Programs\Git"
   $pGitPath = $env:github_git
-  $appPath = Resolve-Path "$env:LocalAppData\Apps\2.0\7NWMARN5.KXM\5HN4TD1J.049\gith..tion_317444273a93ac29_0003.0000_4d58bde1c4cef1d4"
+  $appPath = Resolve-Path "$env:LocalAppData\Apps\2.0\TL3EEK0H.QJG\46AGT1PE.XTM\gith..tion_317444273a93ac29_0003.0000_f3a9f44c4e4f6514"
 
   $env:PATH = "$env:PATH;$pGitPath\cmd;$pGitPath\bin;$pGitPath\mingw\bin;$appPath;";
 
