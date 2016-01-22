@@ -34,7 +34,7 @@ cd d:\prj\
 
 # LOCAL VARIABLES
 $msBuildPath = "$env:SystemRoot\Microsoft.NET\Framework\v4.0.30319"
-$basePath = "$env:SystemRoot\System32;C:\ProgramData\chocolatey\bin;$msbuildPath;"
+$basePath = "d:\bin;$env:SystemRoot\System32;C:\ProgramData\chocolatey\bin;$msbuildPath;"
 
 # ENVIRONMENT VARIABLES
 $env:ANDROID_HOME = "$env:LocalAppData\Android\sdk"
@@ -53,6 +53,7 @@ $env:PATH = "$basePath;$env:PSModulePath;$env:PYTHON;"
 . (Resolve-Path "$env:powershell\GitEnvironment.ps1")
 . (Resolve-Path "$env:powershell\NodeEnvironment.ps1")
 . (Resolve-Path "$env:powershell\AndroidEnvironment.ps1")
+. (Resolve-Path "$env:powershell\SvnEnvironment.ps1")
 
 # COLORIZE OUTPUT
 . (Resolve-Path "$env:powershell\ColorOutput.ps1")
