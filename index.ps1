@@ -10,9 +10,6 @@ Set-Alias env-a (Resolve-Path "$env:powershell\AndroidEnvironment.ps1")
 Set-Alias env-node (Resolve-Path "$env:powershell\NodeEnvironment.ps1")
 Set-Alias env-n (Resolve-Path "$env:powershell\NodeEnvironment.ps1")
 
-#SVN
-# C:\Program Files (x86)\VisualSVN\bin;%systemroot%\idmu\common;C:\ProgramFiles\TortoiseSVN\bin;
-
 #VISUAL STUDIO
 # C:\Program Files (x86)\Windows Kits\8.1\Windows Performance Toolkit\;
 
@@ -44,7 +41,6 @@ $env:PATH = "$basePath;$env:PSModulePath;$env:PYTHON;"
 . (Resolve-Path "$env:powershell\GitEnvironment.ps1")
 . (Resolve-Path "$env:powershell\NodeEnvironment.ps1")
 . (Resolve-Path "$env:powershell\AndroidEnvironment.ps1")
-#. (Resolve-Path "$env:powershell\SvnEnvironment.ps1")
 
 # COLORIZE OUTPUT
 . (Resolve-Path "$env:powershell\ColorOutput.ps1")
