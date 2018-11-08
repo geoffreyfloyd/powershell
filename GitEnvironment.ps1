@@ -53,7 +53,9 @@ function Git-Rebase($branch) {
 	if ($branch) {
 		git rebase $branch;
 	}
-	git rebase master;
+	else {
+		git rebase master;
+	}
 }
 function Git-Restore ($arg) {
 	git stash apply $arg;
