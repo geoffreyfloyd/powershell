@@ -49,6 +49,12 @@ function Git-Push ($remote, $branch, $arg) {
 function Git-Shove ($remote, $branch, $arg) {
 	git push --set-upstream $remote $branch $arg --force;
 }
+function Git-Rebase($branch) {
+	if ($branch) {
+		git rebase $branch;
+	}
+	git rebase master;
+}
 function Git-Restore ($arg) {
 	git stash apply $arg;
 }
@@ -92,6 +98,7 @@ Set-Alias pull Git-Pull
 Set-Alias push Git-Push
 Set-Alias shove Git-Shove
 
+Set-Alias rebase Git-Rebase
 Set-Alias stash Git-Stash
 Set-Alias reset Git-Reset
 Set-Alias restore Git-Restore
