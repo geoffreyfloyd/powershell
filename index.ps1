@@ -41,9 +41,7 @@ $env:PATH = "$basePath;$env:PSModulePath;$env:PYTHON;"
 . (Resolve-Path "$env:powershell\GitEnvironment.ps1")
 . (Resolve-Path "$env:powershell\NodeEnvironment.ps1")
 . (Resolve-Path "$env:powershell\AndroidEnvironment.ps1")
+# . (Resolve-Path "$env:powershell\RustEnvironment.ps1")
 
 # COLORIZE OUTPUT
 . (Resolve-Path "$env:powershell\ColorOutput.ps1")
-
-# SET CWD
-cd d:\dev
