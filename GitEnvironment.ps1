@@ -11,6 +11,10 @@ function Git-Branch($1, $2) {
 function Git-Checkout ($branch) {
 	git checkout $branch;
 }
+function Git-Store-WIP ($message) {
+	git add -A;
+	git commit -m wip;
+}
 function Git-Delete-Branch($branch) {
 	git branch -d $branch;
 }
@@ -84,6 +88,7 @@ Set-Alias push Git-Push
 Set-Alias stash Git-Stash
 Set-Alias reset Git-Reset
 Set-Alias restore Git-Restore
+Set-Alias wip Git-Store-WIP
 
 function Rap-Stats ($since) {
 	node stats.js --since $since
