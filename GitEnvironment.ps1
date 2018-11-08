@@ -43,14 +43,20 @@ function Git-New-Branch ($branch) {
 function Git-Pull ($remote, $branch) {
 	git pull $remote $branch;
 }
-function Git-Push ($branch, $arg) {
-	git push $branch $arg;
+function Git-Push ($remote, $branch, $arg) {
+	git push --set-upstream $remote $branch $arg;
+}
+function Git-Shove ($remote, $branch, $arg) {
+	git push --set-upstream $remote $branch $arg --force;
 }
 function Git-Restore ($arg) {
 	git stash apply $arg;
 }
 function Git-Reset ($1, $2, $3) {
 	git reset $1 $2 $3;
+}
+function Git-Undo {
+	git reset HEAD^;
 }
 function Git-Stash () {
 	git add -A;
@@ -84,11 +90,13 @@ Set-Alias master Git-Master
 
 Set-Alias pull Git-Pull
 Set-Alias push Git-Push
+Set-Alias shove Git-Shove
 
 Set-Alias stash Git-Stash
 Set-Alias reset Git-Reset
 Set-Alias restore Git-Restore
 Set-Alias wip Git-Store-WIP
+Set-Alias undo Git-Undo
 
 function Rap-Stats ($since) {
 	node stats.js --since $since
