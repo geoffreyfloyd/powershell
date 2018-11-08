@@ -36,11 +36,21 @@ function Git-Master {
 function Git-New-Branch ($branch) {
 	git checkout -b $branch;
 }
-function Git-Pull ($origin, $branch) {
-	git pull $origin $branch;
+function Git-Pull ($remote, $branch) {
+	git pull $remote $branch;
 }
 function Git-Push ($branch, $arg) {
 	git push $branch $arg;
+}
+function Git-Restore ($arg) {
+	git stash apply $arg;
+}
+function Git-Reset ($1, $2, $3) {
+	git reset $1 $2 $3;
+}
+function Git-Stash () {
+	git add -A;
+	git stash;
 }
 Set-Alias gut git
 Set-Alias got git
@@ -70,6 +80,10 @@ Set-Alias master Git-Master
 
 Set-Alias pull Git-Pull
 Set-Alias push Git-Push
+
+Set-Alias stash Git-Stash
+Set-Alias reset Git-Reset
+Set-Alias restore Git-Restore
 
 function Rap-Stats ($since) {
 	node stats.js --since $since
