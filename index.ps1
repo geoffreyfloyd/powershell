@@ -27,7 +27,7 @@ Set-Alias env-n (Resolve-Path "$env:powershell\NodeEnvironment.ps1")
 
 # LOCAL VARIABLES
 $msBuildPath = "$env:SystemRoot\Microsoft.NET\Framework\v4.0.30319"
-$basePath = "d:\bin;$env:SystemRoot\System32;C:\ProgramData\chocolatey\bin;$msbuildPath;"
+$basePath = "d:\bin;$env:SystemRoot\System32;C:\ProgramData\chocolatey\bin;$msbuildPath;$env:SystemRoot\syswow64\WindowsPowerShell\v1.0\"
 
 # ENVIRONMENT VARIABLES
 $env:HOME = $HOME
@@ -40,7 +40,7 @@ $env:PATH = "$basePath;$env:PSModulePath;$env:PYTHON;"
 # SETUP ENVIRONMENTS
 . (Resolve-Path "$env:powershell\GitEnvironment.ps1")
 . (Resolve-Path "$env:powershell\NodeEnvironment.ps1")
-. (Resolve-Path "$env:powershell\AndroidEnvironment.ps1")
+# . (Resolve-Path "$env:powershell\AndroidEnvironment.ps1")
 # . (Resolve-Path "$env:powershell\RustEnvironment.ps1")
 
 # COLORIZE OUTPUT
