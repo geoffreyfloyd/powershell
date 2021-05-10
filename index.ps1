@@ -1,3 +1,5 @@
+Set-StrictMode -Off
+
 # SHOW
 Set-Alias show Get-ChildItem
 
@@ -26,16 +28,16 @@ Set-Alias env-n (Resolve-Path "$env:powershell\NodeEnvironment.ps1")
 # C:\Program Files\Microsoft SQL Server\120\Tools\Binn\;
 
 # LOCAL VARIABLES
-$msBuildPath = "$env:SystemRoot\Microsoft.NET\Framework\v4.0.30319"
-$basePath = "d:\bin;$env:SystemRoot\System32;C:\ProgramData\chocolatey\bin;$msbuildPath;$env:SystemRoot\syswow64\WindowsPowerShell\v1.0\"
+# $msBuildPath = "$env:SystemRoot\Microsoft.NET\Framework\v4.0.30319"
+# $basePath = "d:\bin;$env:SystemRoot\System32;C:\ProgramData\chocolatey\bin;$msbuildPath;$env:SystemRoot\syswow64\WindowsPowerShell\v1.0\;C:\Program Files\dotnet"
 
 # ENVIRONMENT VARIABLES
-$env:HOME = $HOME
-$env:TMP = $env:TEMP = [system.io.path]::gettemppath()
-$env:PYTHON = "C:\Python27"
+# $env:HOME = $HOME
+# $env:TMP = $env:TEMP = [system.io.path]::gettemppath()
+# $env:PYTHON = "C:\Python27"
 
 # SET PATH
-$env:PATH = "$basePath;$env:PSModulePath;$env:PYTHON;"
+# $env:PATH = "$basePath;$env:PSModulePath;$env:PYTHON;"
 
 # SETUP ENVIRONMENTS
 . (Resolve-Path "$env:powershell\GitEnvironment.ps1")

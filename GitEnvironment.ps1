@@ -1,5 +1,5 @@
-$pGitPath = "C:\Program Files\Git"
-$env:PATH = "$env:PATH;$pGitPath\cmd;$pGitPath\bin;$pGitPath\mingw\bin;";
+# $pGitPath = "C:\Program Files\Git"
+# $env:PATH = "$env:PATH;$pGitPath\cmd;$pGitPath\bin;$pGitPath\mingw\bin;";
 # Import posh-git and load example profile
 Import-Module posh-git
 . (Resolve-Path "$env:powershell\Modules\posh-git\profile.example.ps1")
@@ -32,9 +32,9 @@ function Git-Log {
 function Git-Log-Summary {
 	git log --pretty=format:"%h - %an, %ar : %s"
 }
-function Git-Master {
+function Git-Main {
 	git stash;
-	git checkout master;
+	git checkout main;
 	git pull;
 }
 function Git-New-Branch ($branch) {
@@ -54,7 +54,7 @@ function Git-Rebase($branch) {
 		git rebase $branch;
 	}
 	else {
-		git rebase master;
+		git rebase main;
 	}
 }
 function Git-Restore ($arg) {
@@ -94,7 +94,7 @@ Set-Alias co Git-Checkout
 Set-Alias log Git-Log
 Set-Alias summary Git-Log-Summary
 
-Set-Alias master Git-Master
+Set-Alias main Git-Main
 
 Set-Alias pull Git-Pull
 Set-Alias push Git-Push

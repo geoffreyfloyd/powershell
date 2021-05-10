@@ -19,6 +19,8 @@ $env:GRADLE_HOME = "C:\Program Files\Java\gradle-2.13"
 
 # WORK
 $env:ANDROID_PFTOOLS = "D:\bin\platform-tools"
-$env:JAVA_HOME = "C:\Program Files\Java\jdk1.8.0_181"
+$env:JAVA_HOME = "C:\Program Files\Java\jdk1.8.0_241"
+$env:JRE_HOME = "C:\Program Files\Java\jre1.8.0_241"
+$env:ZOOKEEPER_HOME = "C:\Apache\apache-zookeeper-3.5.6-bin"
 # env:LocalAppData\Android\sdk
-$env:PATH = "$env:PATH;$env:JAVA_HOME;$env:ANDROID_PFTOOLS;$env:JAVA_HOME\bin;$env:ANDROID_HOME;$env:ANDROID_HOME\tools;$env:ANDROID_HOME\platform-tools;$env:GRADLE_HOME\bin;$env:ANDROID_NDK;$env:ANDROID_BLDTOOLS;";
+$env:PATH = "$env:PATH;$env:JAVA_HOME;$env:JRE_HOME\bin;$env:ZOOKEEPER_HOME\bin;$env:ANDROID_PFTOOLS;$env:JAVA_HOME\bin;$env:ANDROID_HOME;$env:ANDROID_HOME\tools;$env:ANDROID_HOME\platform-tools;$env:GRADLE_HOME\bin;$env:ANDROID_NDK;$env:ANDROID_BLDTOOLS;C:\windows\system32\wbem";
